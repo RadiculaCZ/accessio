@@ -15,8 +15,8 @@ module.exports = {
       colors: {
         // Core brand colors
         'brand': {
-          secondary: '#1ABC9C', // Teal: secondary buttons, highlights, icon fills
           primary: '#0A3D62',   // Deep Navy: headers, primary buttons, top‐nav backgrounds
+          secondary: '#1ABC9C', // Teal: secondary buttons, highlights, icon fills
           accent: '#C7EA46',    // Lime Green: use sparingly on CTAs, status indicators, key highlights
           charcoal: '#2F3640',  // Charcoal: body text, secondary text, dark backgrounds
           lightGray: '#F5F6FA', // Light Gray: backgrounds, borders, light text
