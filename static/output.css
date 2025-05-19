@@ -570,6 +570,9 @@
   .pb-10 {
     padding-bottom: calc(var(--spacing) * 10);
   }
+  .pb-\[10vw\] {
+    padding-bottom: 10vw;
+  }
   .pl-5 {
     padding-left: calc(var(--spacing) * 5);
   }
@@ -914,6 +917,11 @@
   .md\:py-32 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 32);
+    }
+  }
+  .md\:pb-\[10vw\] {
+    @media (width >= 48rem) {
+      padding-bottom: 10vw;
     }
   }
   .md\:text-2xl {
