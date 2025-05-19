@@ -489,9 +489,6 @@
   .bg-brand-light-gray {
     background-color: #F5F6FA;
   }
-  .bg-brand-secondary {
-    background-color: #1ABC9C;
-  }
   .bg-white {
     background-color: var(--color-white);
   }
@@ -707,6 +704,13 @@
     --tw-duration: 500ms;
     transition-duration: 500ms;
   }
+  .group-hover\:bg-brand-secondary {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-color: #1ABC9C;
+      }
+    }
+  }
   .group-hover\:text-brand-charcoal {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -718,13 +722,6 @@
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
         color: #F5F6FA;
-      }
-    }
-  }
-  .group-hover\:text-white {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        color: var(--color-white);
       }
     }
   }
