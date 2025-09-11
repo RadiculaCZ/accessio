@@ -53,7 +53,7 @@
         <h1 class="mb-6 text-5xl font-bold leading-tight md:text-6xl">
           Smart, Safe, Modern<br>24/7 Access.
         </h1>
-        <p class="mb-8 text-xl text-gray-300">“Give your customers more options and expand your services with contactless 24/7 access to your facility.”
+        <p class="mb-8 text-xl text-gray-300">Give your customers more options and expand your services with contactless 24/7 access to your <facility-info>facility</facility-info>.
         </p>
         <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
           <a href="https://forms.office.com/e/Pw5w0JsE3q"
@@ -82,7 +82,7 @@
             What <span class="text-brand-secondary">ACCESSIO</span> brings you.
           </h1>
           <p class="mt-4 mb-4 text-xl font-thin text-brand-charcoal">
-            Transform your business with a smart platform that lets you offer services even outside staffed hours. Customers get seamless entry with their phone or card, and you get 24/7 monitoring of internet and power outages with automatic phone alerts.
+            Transform your <facility-info>facility</facility-info> with a smart platform that lets you offer services even outside staffed hours. Customers get seamless entry with their phone or card, and you get 24/7 monitoring of internet and power outages with automatic phone alerts.
           </p>
         </div>
         <div class="flex flex-col w-full gap-8 py-6 md:flex-row">
@@ -101,10 +101,10 @@
               <h1 class="mt-4 text-2xl font-semibold text-brand-charcoal md:text-3xl group-hover:text-brand-charcoal">
                 Efficiency
               </h1>
-              <p class="mt-4 mb-4 font-light text-brand-charcoal md:font-thin line-clamp-4 md:line-clamp-none group-hover:text-brand-light-gray">
+              <p class="mt-4 mb-4 font-light text-brand-charcoal md:font-thin group-hover:text-brand-light-gray">
                 Practical automation of entry and access management without unnecessary overhead.
               </p>
-              <ul class="pl-5 mt-2 font-light list-disc text-brand-charcoal md:font-thin line-clamp-4 md:line-clamp-none group-hover:text-brand-light-gray ">
+              <ul class="pl-5 mt-2 font-light list-disc text-brand-charcoal md:font-thin group-hover:text-brand-light-gray ">
                 <li>
                   Entry by phone via Apple/Google Wallet.
                 </li>
@@ -138,10 +138,10 @@
               <h1 class="mt-4 text-2xl font-semibold md:text-3xl text-brand-charcoal ">
                 Comfort
               </h1>
-              <p class="mt-4 mb-4 font-light text-brand-charcoal group-hover:text-brand-light-gray md:font-thin line-clamp-4 md:line-clamp-none">
+              <p class="mt-4 mb-4 font-light text-brand-charcoal group-hover:text-brand-light-gray md:font-thin ">
                 Simple entry without extra apps or plastic cards.
               </p>
-              <ul class="pl-5 mt-2 font-light list-disc text-brand-charcoal md:font-thin line-clamp-4 md:line-clamp-none group-hover:text-brand-light-gray ">
+              <ul class="pl-5 mt-2 font-light list-disc text-brand-charcoal md:font-thin group-hover:text-brand-light-gray ">
                 <li>
                   Phone as a key: Apple/Google Wallet pass.
                 </li>
@@ -181,10 +181,10 @@
               <h1 class="mt-4 text-2xl font-semibold text-brand-charcoal md:text-3xl group-hover:text-brand-charcoal">
                 Monetization
               </h1>
-              <p class="mt-4 mb-4 font-light text-brand-charcoal md:font-thin line-clamp-4 md:line-clamp-none group-hover:text-brand-light-gray ">
+              <p class="mt-4 mb-4 font-light text-brand-charcoal md:font-thin group-hover:text-brand-light-gray ">
                 Tariffs and products you can offer thanks to Accessio.
               </p>
-              <ul class="pl-5 mt-2 font-light list-disc text-brand-charcoal md:font-thin line-clamp-4 md:line-clamp-none group-hover:text-brand-light-gray ">
+              <ul class="pl-5 mt-2 font-light list-disc text-brand-charcoal md:font-thin group-hover:text-brand-light-gray ">
                 <li>
                   Time tariffs: days of the week and hours (e.g. off-peak, night, weekend).
                 </li>
@@ -213,10 +213,10 @@
               <h1 class="mt-4 text-2xl font-semibold text-brand-charcoal md:text-3xl group-hover:text-brand-charcoal">
                 Reliability
               </h1>
-              <p class="mt-4 mb-4 font-light text-brand-charcoal md:font-thin line-clamp-4 md:line-clamp-none group-hover:text-brand-light-gray ">
+              <p class="mt-4 mb-4 font-light text-brand-charcoal md:font-thin group-hover:text-brand-light-gray ">
                 The system monitors itself and recovers after outages without operator intervention.
               </p>
-              <ul class="pl-5 mt-2 font-light list-disc text-brand-charcoal md:font-thin line-clamp-4 md:line-clamp-none group-hover:text-brand-light-gray ">
+              <ul class="pl-5 mt-2 font-light list-disc text-brand-charcoal md:font-thin group-hover:text-brand-light-gray ">
                 <li>
                   Remote diagnostics and device restart—common issues can be solved remotely.
                 </li>
@@ -314,6 +314,57 @@
   <!-- FOOTER -->
 
   <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+  <script>
+  class FacilityInfo extends HTMLElement {
+    constructor() {
+      super();
+      this.attachShadow({ mode: 'open' });
+      this.tooltipVisible = false;
+      this.handleDocumentTouch = this.handleDocumentTouch.bind(this);
+    }
+
+    connectedCallback() {
+      this.shadowRoot.innerHTML = `
+        <link rel="stylesheet" href="/static/output.css">
+        <span class="relative inline-block font-semibold cursor-pointer group text-brand-secondary hover:underline focus:underline" tabindex="0">
+          <slot></slot>
+          <sup class="ml-1 text-xs align-super bg-brand-secondary text-white rounded-full px-1.5 py-0.5">?</sup>
+          <span class="absolute left-0 z-20 w-56 px-4 py-2 mt-2 text-sm text-left transition-opacity duration-200 bg-white rounded-lg shadow-lg opacity-0 pointer-events-none text-brand-charcoal group-hover:opacity-100 group-focus:opacity-100" style="top: 1.8em;" role="tooltip">
+            <ul class="pl-5 mt-1 text-left list-disc text-brand-charcoal">
+              <li>24/7 gym</li>
+              <li>coworking</li>
+              <li>membership club, etc.</li>
+            </ul>
+          </span>
+        </span>
+      `;
+
+      // Mobile tap support
+      const wrapper = this.shadowRoot.querySelector('.group');
+      const tooltip = this.shadowRoot.querySelector('[role="tooltip"]');
+      wrapper.addEventListener('touchstart', (e) => {
+        e.stopPropagation();
+        this.tooltipVisible = !this.tooltipVisible;
+        tooltip.style.opacity = this.tooltipVisible ? '1' : '0';
+        tooltip.style.pointerEvents = this.tooltipVisible ? 'auto' : 'none';
+        if (this.tooltipVisible) {
+          document.body.addEventListener('touchstart', this.handleDocumentTouch);
+        }
+      });
+    }
+
+    handleDocumentTouch() {
+      const tooltip = this.shadowRoot.querySelector('[role="tooltip"]');
+      this.tooltipVisible = false;
+      tooltip.style.opacity = '0';
+      tooltip.style.pointerEvents = 'none';
+      document.body.removeEventListener('touchstart', this.handleDocumentTouch);
+    }
+  }
+  customElements.define('facility-info', FacilityInfo);
+  </script>
+
 </body>
 
 </html>
