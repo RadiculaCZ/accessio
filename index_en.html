@@ -51,7 +51,7 @@
     <div class="container relative z-10 px-4 py-24 pb-[10vw] mx-auto md:py-32 md:pb-[10vw]">
       <div class="w-full mb-12 md:w-1/2 md:mb-0">
         <h1 class="mb-6 text-5xl font-bold leading-tight md:text-6xl">
-          Smart, Safe, Modern<br>24/7 Access.
+          Smart, Safe, Modern<br />24/7 Access.
         </h1>
         <p class="mb-8 text-xl text-gray-300">Give your customers more options and expand your services with contactless 24/7 access to your <facility-info>facility</facility-info>.
         </p>
@@ -82,7 +82,7 @@
             What <span class="text-brand-secondary">ACCESSIO</span> brings you.
           </h1>
           <p class="mt-4 mb-4 text-xl font-thin text-brand-charcoal">
-            Transform your <facility-info>facility</facility-info> with a smart platform that lets you offer services even outside staffed hours. Customers get seamless entry with their phone or card, and you get 24/7 monitoring of internet and power outages with automatic phone alerts.
+            Transform your <facility-info>facility</facility-info> with a smart platform that lets you offer services even outside staffed hours. Customers get seamless entry with their phone or card (or chip), and you get 24/7 monitoring of internet and power outages with automatic phone alerts.
           </p>
         </div>
         <div class="flex flex-col w-full gap-8 py-6 md:flex-row">
@@ -102,7 +102,7 @@
                 Efficiency
               </h1>
               <p class="mt-4 mb-4 font-light text-brand-charcoal md:font-thin group-hover:text-brand-light-gray">
-                Practical automation of entry and access management without unnecessary overhead.
+                Practical automation of entry and access management without unnecessary overhead:
               </p>
               <ul class="pl-5 mt-2 font-light list-disc text-brand-charcoal md:font-thin group-hover:text-brand-light-gray ">
                 <li>
@@ -139,14 +139,14 @@
                 Comfort
               </h1>
               <p class="mt-4 mb-4 font-light text-brand-charcoal group-hover:text-brand-light-gray md:font-thin ">
-                Simple entry without extra apps or plastic cards.
+                Simple entry without extra apps or plastic cards:
               </p>
               <ul class="pl-5 mt-2 font-light list-disc text-brand-charcoal md:font-thin group-hover:text-brand-light-gray ">
                 <li>
                   Phone as a key: Apple/Google Wallet pass.
                 </li>
                 <li>
-                  Pass is issued instantly after purchase or invitation; nothing to pick up.
+                  The pass is sent automatically after purchase; nothing to pick up.
                 </li>
                 <li>
                   Membership and access changes are reflected in the pass automatically.
@@ -182,7 +182,7 @@
                 Monetization
               </h1>
               <p class="mt-4 mb-4 font-light text-brand-charcoal md:font-thin group-hover:text-brand-light-gray ">
-                Tariffs and products you can offer thanks to Accessio.
+                Tariffs and products you can offer thanks to Accessio:
               </p>
               <ul class="pl-5 mt-2 font-light list-disc text-brand-charcoal md:font-thin group-hover:text-brand-light-gray ">
                 <li>
@@ -214,7 +214,7 @@
                 Reliability
               </h1>
               <p class="mt-4 mb-4 font-light text-brand-charcoal md:font-thin group-hover:text-brand-light-gray ">
-                The system monitors itself and recovers after outages without operator intervention.
+                The system monitors itself and recovers after outages without operator intervention:
               </p>
               <ul class="pl-5 mt-2 font-light list-disc text-brand-charcoal md:font-thin group-hover:text-brand-light-gray ">
                 <li>
@@ -268,7 +268,7 @@
             </div>
             <h3 class="mt-6 text-xl font-semibold leading-tight md:mt-10">Payment</h3>
             <p class="mt-4 text-base md:text-lg">
-              Members pay online and download the pass to their phone. Those who don't want to use a phone can use an NFC card as an alternative.
+              Members pay online and download the pass to their phone. Those who don't want to use a phone can use a plastic access card or chip as an alternative.
             </p>
           </div>
           <div class="group">
@@ -313,6 +313,7 @@
   </section>
   <!-- FOOTER -->
 
+
   <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 
   <script>
@@ -327,14 +328,17 @@
     connectedCallback() {
       this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="/static/output.css">
-        <span class="relative inline-block font-semibold cursor-pointer group text-brand-secondary hover:underline focus:underline" tabindex="0">
-          <slot></slot>
+        <span class="relative inline-block font-semibold transition-colors duration-200 rounded-md cursor-pointer group text-brand-secondary" tabindex="0">
+          <span class="transition-colors duration-200 rounded-md outline-dashed outline-2 outline-brand-secondary outline-offset-0 focus:outline-brand-charcoal hover:bg-brand-secondary/10 focus:bg-brand-secondary/10">
+            <slot></slot>
+          </span>
           <sup class="ml-1 text-xs align-super bg-brand-secondary text-white rounded-full px-1.5 py-0.5">?</sup>
           <span class="absolute left-0 z-20 w-56 px-4 py-2 mt-2 text-sm text-left transition-opacity duration-200 bg-white rounded-lg shadow-lg opacity-0 pointer-events-none text-brand-charcoal group-hover:opacity-100 group-focus:opacity-100" style="top: 1.8em;" role="tooltip">
             <ul class="pl-5 mt-1 text-left list-disc text-brand-charcoal">
               <li>24/7 gym</li>
               <li>coworking</li>
-              <li>membership club, etc.</li>
+              <li>membership club</li>
+              <li>and more ...</li>
             </ul>
           </span>
         </span>

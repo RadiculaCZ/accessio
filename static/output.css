@@ -863,21 +863,9 @@
       }
     }
   }
-  .hover\:underline {
-    &:hover {
-      @media (hover: hover) {
-        text-decoration-line: underline;
-      }
-    }
-  }
   .focus\:bg-brand-secondary\/10 {
     &:focus {
       background-color: color-mix(in oklab, #1ABC9C 10%, transparent);
-    }
-  }
-  .focus\:underline {
-    &:focus {
-      text-decoration-line: underline;
     }
   }
   .focus\:outline-brand-charcoal {
