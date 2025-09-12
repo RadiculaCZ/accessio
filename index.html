@@ -341,14 +341,17 @@
     connectedCallback() {
       this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="/static/output.css">
-        <span class="relative inline-block font-semibold cursor-pointer group text-brand-secondary hover:underline focus:underline" tabindex="0">
-          <slot></slot>
+        <span class="relative inline-block font-semibold transition-colors duration-200 rounded-md cursor-pointer group text-brand-secondary" tabindex="0">
+          <span class="transition-colors duration-200 rounded-md outline-dashed outline-2 outline-brand-secondary outline-offset-0 focus:outline-brand-charcoal hover:bg-brand-secondary/10 focus:bg-brand-secondary/10">
+            <slot></slot>
+          </span>
           <sup class="ml-1 text-xs align-super bg-brand-secondary text-white rounded-full px-1.5 py-0.5">?</sup>
           <span class="absolute left-0 z-20 w-56 px-4 py-2 mt-2 text-sm text-left transition-opacity duration-200 bg-white rounded-lg shadow-lg opacity-0 pointer-events-none text-brand-charcoal group-hover:opacity-100 group-focus:opacity-100" style="top: 1.8em;" role="tooltip">
             <ul class="pl-5 mt-1 text-left list-disc text-brand-charcoal">
               <li>fitness 24/7</li>
               <li>coworking</li>
-              <li>membership club apod.</li>
+              <li>membership club</li>
+              <li>a další ...</li>
             </ul>
           </span>
         </span>

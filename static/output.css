@@ -738,6 +738,16 @@
     --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+  .outline-2 {
+    outline-style: var(--tw-outline-style);
+    outline-width: 2px;
+  }
+  .outline-offset-0 {
+    outline-offset: 0px;
+  }
+  .outline-brand-secondary {
+    outline-color: #1ABC9C;
+  }
   .blur-\[118px\] {
     --tw-blur: blur(118px);
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
@@ -773,6 +783,10 @@
   .duration-500 {
     --tw-duration: 500ms;
     transition-duration: 500ms;
+  }
+  .outline-dashed {
+    --tw-outline-style: dashed;
+    outline-style: dashed;
   }
   .group-hover\:bg-brand-secondary {
     &:is(:where(.group):hover *) {
@@ -835,6 +849,13 @@
       }
     }
   }
+  .hover\:bg-brand-secondary\/10 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in oklab, #1ABC9C 10%, transparent);
+      }
+    }
+  }
   .hover\:text-brand-primary {
     &:hover {
       @media (hover: hover) {
@@ -849,9 +870,19 @@
       }
     }
   }
+  .focus\:bg-brand-secondary\/10 {
+    &:focus {
+      background-color: color-mix(in oklab, #1ABC9C 10%, transparent);
+    }
+  }
   .focus\:underline {
     &:focus {
       text-decoration-line: underline;
+    }
+  }
+  .focus\:outline-brand-charcoal {
+    &:focus {
+      outline-color: #2F3640;
     }
   }
   .xs\:flex-nowrap {
@@ -1284,6 +1315,11 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-blur {
   syntax: "*";
   inherits: false;
@@ -1382,6 +1418,7 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;
